@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class Biblioteca {
     private ArrayList<Livro> livros = new ArrayList<>();
-    private String pasta;
-    File arquivo = new File("C:\\Users\\nerda\\Downloads\\SistemaBiblioteca");
+    private static String pasta = "SistemaBiblioteca";
+    File arquivo = new File(pasta);
     
     public ArrayList<Livro> getLivros() {
         return livros;
@@ -35,7 +35,7 @@ public class Biblioteca {
     public String listagemDeLivro(){
       StringBuilder string = new StringBuilder();
       
-         try (BufferedReader ler = new BufferedReader(new FileReader("C:\\Users\\marqu\\OneDrive\\Desktop\\biblioteca em java.txt"))) {
+         try (BufferedReader ler = new BufferedReader(new FileReader(pasta))) {
              String linha;
              while((linha = ler.readLine())!= null){
                 string.append(linha).append("\n");
@@ -47,7 +47,7 @@ public class Biblioteca {
      
     public String consultaDeLivro(String titulo){
          StringBuilder string = new StringBuilder();
-          try (BufferedReader ler = new BufferedReader(new FileReader("C:\\Users\\marqu\\OneDrive\\Desktop\\biblioteca em java.txt"))) {
+          try (BufferedReader ler = new BufferedReader(new FileReader(pasta))) {
              String linha;
              while((linha = ler.readLine())!= null){
                  if(linha.toLowerCase().contains(titulo.toLowerCase())){
