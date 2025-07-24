@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Biblioteca {
     private ArrayList<Livro> livros = new ArrayList<>();
-    private static String pasta = "SistemaBiblioteca";
+    private static String pasta = "SistemaBiblioteca.txt";
     File arquivo = new File(pasta);
     
     public ArrayList<Livro> getLivros() {

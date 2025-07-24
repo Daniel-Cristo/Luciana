@@ -30,14 +30,14 @@ public class TelaInicial extends javax.swing.JFrame {
         jColorChooser1 = new javax.swing.JColorChooser();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        buttonIncluir = new javax.swing.JButton();
+        buttonListar = new javax.swing.JButton();
+        buttonConsultar = new javax.swing.JButton();
+        buttonAlterar = new javax.swing.JButton();
+        buttonExcluir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jButton6 = new javax.swing.JButton();
+        buttonSair = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -47,30 +47,35 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jLabel2.setText("BIBLIOTECA CENTRAL ");
 
-        jButton1.setText("INCLUIR LIVRO");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonIncluir.setText("INCLUIR LIVRO");
+        buttonIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonIncluirActionPerformed(evt);
             }
         });
 
-        jButton2.setText("LISTAR LIVROS");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonListar.setText("LISTAR LIVROS");
+        buttonListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                buttonListarActionPerformed(evt);
             }
         });
 
-        jButton3.setText("CONSULTAR LIVROS");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonConsultar.setText("CONSULTAR LIVROS");
+        buttonConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                buttonConsultarActionPerformed(evt);
             }
         });
 
-        jButton4.setText("ALTERAR LIVRO");
+        buttonAlterar.setText("ALTERAR LIVRO");
+        buttonAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAlterarActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("EXCLUIR LIVRO");
+        buttonExcluir.setText("EXCLUIR LIVRO");
 
         jLabel1.setText("Opcoes:");
 
@@ -88,18 +93,18 @@ public class TelaInicial extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton2)
-                                    .addComponent(jButton3)
-                                    .addComponent(jButton4)
-                                    .addComponent(jButton5)
-                                    .addComponent(jButton1)
+                                    .addComponent(buttonListar)
+                                    .addComponent(buttonConsultar)
+                                    .addComponent(buttonAlterar)
+                                    .addComponent(buttonExcluir)
+                                    .addComponent(buttonIncluir)
                                     .addComponent(jLabel1))))
                         .addGap(0, 135, Short.MAX_VALUE))
                     .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4, jButton5});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {buttonAlterar, buttonConsultar, buttonExcluir, buttonIncluir, buttonListar});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,22 +116,22 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(buttonIncluir)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(buttonListar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(buttonConsultar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(buttonAlterar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(buttonExcluir)
                 .addContainerGap())
         );
 
-        jButton6.setText("SAIR");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        buttonSair.setText("SAIR");
+        buttonSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                buttonSairActionPerformed(evt);
             }
         });
 
@@ -140,7 +145,7 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(buttonSair)
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -149,35 +154,39 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(buttonSair)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void buttonIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIncluirActionPerformed
         Cadastrar tela = new Cadastrar();
         tela.setVisible(true);
         tela.setLocationRelativeTo(null);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_buttonIncluirActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void buttonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConsultarActionPerformed
        Consultar consultar = new Consultar();
        consultar.setVisible(true);
        dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_buttonConsultarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void buttonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonListarActionPerformed
        Listar listar = new Listar();
        listar.setVisible(true);
        dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_buttonListarActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void buttonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSairActionPerformed
        System.exit(0);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_buttonSairActionPerformed
+
+    private void buttonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAlterarActionPerformed
+        
+    }//GEN-LAST:event_buttonAlterarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,12 +226,12 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton buttonAlterar;
+    private javax.swing.JButton buttonConsultar;
+    private javax.swing.JButton buttonExcluir;
+    private javax.swing.JButton buttonIncluir;
+    private javax.swing.JButton buttonListar;
+    private javax.swing.JButton buttonSair;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
