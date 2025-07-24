@@ -76,6 +76,11 @@ public class TelaInicial extends javax.swing.JFrame {
         });
 
         buttonExcluir.setText("EXCLUIR LIVRO");
+        buttonExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonExcluirActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Opcoes:");
 
@@ -185,8 +190,16 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonSairActionPerformed
 
     private void buttonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAlterarActionPerformed
-        
+        Alterar alterar = new Alterar();
+        alterar.setVisible(true);
+        dispose();
     }//GEN-LAST:event_buttonAlterarActionPerformed
+
+    private void buttonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExcluirActionPerformed
+        Excluir excluir = new Excluir();
+        excluir.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_buttonExcluirActionPerformed
 
     /**
      * @param args the command line arguments
