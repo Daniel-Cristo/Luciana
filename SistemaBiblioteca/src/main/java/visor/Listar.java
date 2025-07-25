@@ -166,6 +166,7 @@ public class Listar extends javax.swing.JFrame {
     private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarActionPerformed
       TelaInicial tela = new TelaInicial();
       tela.setVisible(true);
+      tela.setLocationRelativeTo(null);
       dispose();
     }//GEN-LAST:event_buttonVoltarActionPerformed
 
