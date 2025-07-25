@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package visor;
-
+import biblioteca.Biblioteca;
+import javax.swing.JOptionPane;
 /**
  *
  * @author nerda
@@ -140,8 +141,9 @@ public class Excluir2 extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonSairActionPerformed
 
     private void ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarActionPerformed
-      //FAZER O CONFIRM AQUI
-      
+     int aux= biblioteca.excluirLivro(labelExcluir.getText());
+      if(aux==1)
+          JOptionPane.showMessageDialog(this, "Livro Excluido com Sucesso!");
     }//GEN-LAST:event_ConfirmarActionPerformed
 
     /**
@@ -178,7 +180,7 @@ public class Excluir2 extends javax.swing.JFrame {
             }
         });
     }
-
+    Biblioteca biblioteca = new Biblioteca();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Confirmar;
     private javax.swing.JButton buttonSair;
