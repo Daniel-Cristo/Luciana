@@ -176,12 +176,14 @@ public class TelaInicial extends javax.swing.JFrame {
     private void buttonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConsultarActionPerformed
        Consultar consultar = new Consultar();
        consultar.setVisible(true);
+       consultar.setLocationRelativeTo(null);
        dispose();
     }//GEN-LAST:event_buttonConsultarActionPerformed
 
     private void buttonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonListarActionPerformed
        Listar listar = new Listar();
        listar.setVisible(true);
+       listar.setLocationRelativeTo(null);
        dispose();
     }//GEN-LAST:event_buttonListarActionPerformed
 
@@ -192,12 +194,14 @@ public class TelaInicial extends javax.swing.JFrame {
     private void buttonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAlterarActionPerformed
         Alterar alterar = new Alterar();
         alterar.setVisible(true);
+        alterar.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_buttonAlterarActionPerformed
 
     private void buttonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExcluirActionPerformed
         Excluir excluir = new Excluir();
         excluir.setVisible(true);
+        excluir.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_buttonExcluirActionPerformed
 

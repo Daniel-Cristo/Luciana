@@ -4,6 +4,8 @@
  */
 package visor;
 
+import biblioteca.Biblioteca;
+
 /**
  *
  * @author nerda
@@ -175,6 +177,7 @@ public class Alterar extends javax.swing.JFrame {
     private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarActionPerformed
         TelaInicial tela = new TelaInicial();
         tela.setVisible(true);
+        tela.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_buttonVoltarActionPerformed
 
@@ -220,7 +223,7 @@ public class Alterar extends javax.swing.JFrame {
             }
         });
     }
-
+Biblioteca biblioteca = new Biblioteca();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonAlterar;
     private javax.swing.JButton buttonSair;

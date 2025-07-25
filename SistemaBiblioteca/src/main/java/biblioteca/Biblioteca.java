@@ -68,7 +68,35 @@ public class Biblioteca {
     public void alteracaoDeLivro(){
     
     }
-    public void exclusaoDeLivro(){
+    public String exclusaoDeLivro(String titulo, String autor, int comfirma){
+          StringBuilder string = new StringBuilder();
+          try (BufferedReader ler = new BufferedReader(new FileReader(pasta))) {
+             String linha;
+             //enquanto o arquivo tiver linha ele vai ler
+             while((linha = ler.readLine())!= null){
+                 //conferir se titulo e autor esta na linha se tiver vai retornar essa linha
+                 //essa linha deve aparecer no textArea modificada para o usuario n digitar nela.
+                 if(linha.toLowerCase().contains(titulo.toLowerCase()) && 
+                         linha.toLowerCase().contains(autor.toLowerCase()) ){
+                    ler.close(); 
+                     string.append(linha).append("\n");
+                     return string.toString();
+                 }else{
+                     ler.close();
+             string.append("livro nao encontrado.");
+             return string.toString();
+                 }              
+             }
+             //conferir se o usuario apertar no botao sim vamos escluir o livro e mostrar a msg.
+             if(comfirma == 1){
+             
+             } else {
+              }
+             // acho que e bom colocar outro catch caso o arquivo nao seja excluido ou so usar if mesmo.
+          } catch(IOException e){
+         System.out.println("nao foi possivel acessar o arquivo"+ e.getMessage());
+     }
+        return null;
     
     }
 
