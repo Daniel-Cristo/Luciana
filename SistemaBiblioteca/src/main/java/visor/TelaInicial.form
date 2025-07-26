@@ -82,7 +82,6 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="buttonListar" linkSize="1" min="-2" max="-2" attributes="0"/>
                                       <Component id="buttonConsultar" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="buttonAlterar" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="buttonExcluir" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="buttonIncluir" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -106,17 +105,15 @@
                   <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace pref="25" max="32767" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="buttonIncluir" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="buttonListar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="buttonConsultar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="buttonAlterar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="buttonExcluir" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -149,14 +146,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonConsultarActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="buttonAlterar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="ALTERAR LIVRO"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAlterarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="buttonExcluir">

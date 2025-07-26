@@ -33,7 +33,6 @@ public class TelaInicial extends javax.swing.JFrame {
         buttonIncluir = new javax.swing.JButton();
         buttonListar = new javax.swing.JButton();
         buttonConsultar = new javax.swing.JButton();
-        buttonAlterar = new javax.swing.JButton();
         buttonExcluir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -68,13 +67,6 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
-        buttonAlterar.setText("ALTERAR LIVRO");
-        buttonAlterar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAlterarActionPerformed(evt);
-            }
-        });
-
         buttonExcluir.setText("EXCLUIR LIVRO");
         buttonExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +92,6 @@ public class TelaInicial extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(buttonListar)
                                     .addComponent(buttonConsultar)
-                                    .addComponent(buttonAlterar)
                                     .addComponent(buttonExcluir)
                                     .addComponent(buttonIncluir)
                                     .addComponent(jLabel1))))
@@ -109,7 +100,7 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {buttonAlterar, buttonConsultar, buttonExcluir, buttonIncluir, buttonListar});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {buttonConsultar, buttonExcluir, buttonIncluir, buttonListar});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,17 +111,15 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(buttonIncluir)
                 .addGap(18, 18, 18)
                 .addComponent(buttonListar)
                 .addGap(18, 18, 18)
                 .addComponent(buttonConsultar)
-                .addGap(18, 18, 18)
-                .addComponent(buttonAlterar)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(buttonExcluir)
-                .addContainerGap())
+                .addGap(26, 26, 26))
         );
 
         buttonSair.setText("SAIR");
@@ -191,13 +180,6 @@ public class TelaInicial extends javax.swing.JFrame {
        System.exit(0);
     }//GEN-LAST:event_buttonSairActionPerformed
 
-    private void buttonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAlterarActionPerformed
-        Alterar alterar = new Alterar();
-        alterar.setVisible(true);
-        alterar.setLocationRelativeTo(null);
-        dispose();
-    }//GEN-LAST:event_buttonAlterarActionPerformed
-
     private void buttonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExcluirActionPerformed
         Excluir excluir = new Excluir();
         excluir.setVisible(true);
@@ -243,7 +225,6 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonAlterar;
     private javax.swing.JButton buttonConsultar;
     private javax.swing.JButton buttonExcluir;
     private javax.swing.JButton buttonIncluir;
